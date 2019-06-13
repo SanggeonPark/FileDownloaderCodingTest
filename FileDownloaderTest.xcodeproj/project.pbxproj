@@ -1,0 +1,496 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DBFDCE1422B25C5D00C94C86 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFDCE1322B25C5D00C94C86 /* AppDelegate.swift */; };
+		DBFDCE1622B25C5D00C94C86 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFDCE1522B25C5D00C94C86 /* ViewController.swift */; };
+		DBFDCE1922B25C5D00C94C86 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBFDCE1722B25C5D00C94C86 /* Main.storyboard */; };
+		DBFDCE1B22B25C6000C94C86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBFDCE1A22B25C6000C94C86 /* Assets.xcassets */; };
+		DBFDCE1E22B25C6000C94C86 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBFDCE1C22B25C6000C94C86 /* LaunchScreen.storyboard */; };
+		DBFDCE2922B25C6000C94C86 /* FileDownloaderTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFDCE2822B25C6000C94C86 /* FileDownloaderTestTests.swift */; };
+		DBFDCE3522B25E1000C94C86 /* DownloadModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFDCE3422B25E1000C94C86 /* DownloadModel.swift */; };
+		DBFDCE3722B25F3100C94C86 /* Downloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFDCE3622B25F3100C94C86 /* Downloader.swift */; };
+		DBFDCE3B22B2914C00C94C86 /* DownloadStatusUpdateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFDCE3A22B2914C00C94C86 /* DownloadStatusUpdateModel.swift */; };
+		DBFDCE4D22B2A85E00C94C86 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFDCE4C22B2A85E00C94C86 /* ViewModel.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DBFDCE2522B25C6000C94C86 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DBFDCE0822B25C5D00C94C86 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DBFDCE0F22B25C5D00C94C86;
+			remoteInfo = FileDownloaderTest;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		DBFDCE1022B25C5D00C94C86 /* FileDownloaderTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FileDownloaderTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DBFDCE1322B25C5D00C94C86 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DBFDCE1522B25C5D00C94C86 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DBFDCE1822B25C5D00C94C86 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DBFDCE1A22B25C6000C94C86 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DBFDCE1D22B25C6000C94C86 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DBFDCE1F22B25C6000C94C86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DBFDCE2422B25C6000C94C86 /* FileDownloaderTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FileDownloaderTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DBFDCE2822B25C6000C94C86 /* FileDownloaderTestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileDownloaderTestTests.swift; sourceTree = "<group>"; };
+		DBFDCE2A22B25C6000C94C86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DBFDCE3422B25E1000C94C86 /* DownloadModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadModel.swift; sourceTree = "<group>"; };
+		DBFDCE3622B25F3100C94C86 /* Downloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Downloader.swift; sourceTree = "<group>"; };
+		DBFDCE3A22B2914C00C94C86 /* DownloadStatusUpdateModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadStatusUpdateModel.swift; sourceTree = "<group>"; };
+		DBFDCE4C22B2A85E00C94C86 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DBFDCE0D22B25C5D00C94C86 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DBFDCE2122B25C6000C94C86 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DBFDCE0722B25C5D00C94C86 = {
+			isa = PBXGroup;
+			children = (
+				DBFDCE1222B25C5D00C94C86 /* FileDownloaderTest */,
+				DBFDCE2722B25C6000C94C86 /* FileDownloaderTestTests */,
+				DBFDCE1122B25C5D00C94C86 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DBFDCE1122B25C5D00C94C86 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DBFDCE1022B25C5D00C94C86 /* FileDownloaderTest.app */,
+				DBFDCE2422B25C6000C94C86 /* FileDownloaderTestTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DBFDCE1222B25C5D00C94C86 /* FileDownloaderTest */ = {
+			isa = PBXGroup;
+			children = (
+				DBFDCE3322B25DE800C94C86 /* FileDownloader */,
+				DBFDCE1322B25C5D00C94C86 /* AppDelegate.swift */,
+				DBFDCE1522B25C5D00C94C86 /* ViewController.swift */,
+				DBFDCE1722B25C5D00C94C86 /* Main.storyboard */,
+				DBFDCE1A22B25C6000C94C86 /* Assets.xcassets */,
+				DBFDCE1C22B25C6000C94C86 /* LaunchScreen.storyboard */,
+				DBFDCE1F22B25C6000C94C86 /* Info.plist */,
+				DBFDCE4C22B2A85E00C94C86 /* ViewModel.swift */,
+			);
+			path = FileDownloaderTest;
+			sourceTree = "<group>";
+		};
+		DBFDCE2722B25C6000C94C86 /* FileDownloaderTestTests */ = {
+			isa = PBXGroup;
+			children = (
+				DBFDCE2822B25C6000C94C86 /* FileDownloaderTestTests.swift */,
+				DBFDCE2A22B25C6000C94C86 /* Info.plist */,
+			);
+			path = FileDownloaderTestTests;
+			sourceTree = "<group>";
+		};
+		DBFDCE3322B25DE800C94C86 /* FileDownloader */ = {
+			isa = PBXGroup;
+			children = (
+				DBFDCE3422B25E1000C94C86 /* DownloadModel.swift */,
+				DBFDCE3A22B2914C00C94C86 /* DownloadStatusUpdateModel.swift */,
+				DBFDCE3622B25F3100C94C86 /* Downloader.swift */,
+			);
+			path = FileDownloader;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DBFDCE0F22B25C5D00C94C86 /* FileDownloaderTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DBFDCE2D22B25C6000C94C86 /* Build configuration list for PBXNativeTarget "FileDownloaderTest" */;
+			buildPhases = (
+				DBFDCE0C22B25C5D00C94C86 /* Sources */,
+				DBFDCE0D22B25C5D00C94C86 /* Frameworks */,
+				DBFDCE0E22B25C5D00C94C86 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FileDownloaderTest;
+			productName = FileDownloaderTest;
+			productReference = DBFDCE1022B25C5D00C94C86 /* FileDownloaderTest.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DBFDCE2322B25C6000C94C86 /* FileDownloaderTestTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DBFDCE3022B25C6000C94C86 /* Build configuration list for PBXNativeTarget "FileDownloaderTestTests" */;
+			buildPhases = (
+				DBFDCE2022B25C6000C94C86 /* Sources */,
+				DBFDCE2122B25C6000C94C86 /* Frameworks */,
+				DBFDCE2222B25C6000C94C86 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DBFDCE2622B25C6000C94C86 /* PBXTargetDependency */,
+			);
+			name = FileDownloaderTestTests;
+			productName = FileDownloaderTestTests;
+			productReference = DBFDCE2422B25C6000C94C86 /* FileDownloaderTestTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DBFDCE0822B25C5D00C94C86 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1020;
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = "Sanggeon Park";
+				TargetAttributes = {
+					DBFDCE0F22B25C5D00C94C86 = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
+					DBFDCE2322B25C6000C94C86 = {
+						CreatedOnToolsVersion = 10.2.1;
+						TestTargetID = DBFDCE0F22B25C5D00C94C86;
+					};
+				};
+			};
+			buildConfigurationList = DBFDCE0B22B25C5D00C94C86 /* Build configuration list for PBXProject "FileDownloaderTest" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DBFDCE0722B25C5D00C94C86;
+			productRefGroup = DBFDCE1122B25C5D00C94C86 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DBFDCE0F22B25C5D00C94C86 /* FileDownloaderTest */,
+				DBFDCE2322B25C6000C94C86 /* FileDownloaderTestTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DBFDCE0E22B25C5D00C94C86 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DBFDCE1E22B25C6000C94C86 /* LaunchScreen.storyboard in Resources */,
+				DBFDCE1B22B25C6000C94C86 /* Assets.xcassets in Resources */,
+				DBFDCE1922B25C5D00C94C86 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DBFDCE2222B25C6000C94C86 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DBFDCE0C22B25C5D00C94C86 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DBFDCE1622B25C5D00C94C86 /* ViewController.swift in Sources */,
+				DBFDCE1422B25C5D00C94C86 /* AppDelegate.swift in Sources */,
+				DBFDCE3722B25F3100C94C86 /* Downloader.swift in Sources */,
+				DBFDCE3B22B2914C00C94C86 /* DownloadStatusUpdateModel.swift in Sources */,
+				DBFDCE3522B25E1000C94C86 /* DownloadModel.swift in Sources */,
+				DBFDCE4D22B2A85E00C94C86 /* ViewModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DBFDCE2022B25C6000C94C86 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DBFDCE2922B25C6000C94C86 /* FileDownloaderTestTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DBFDCE2622B25C6000C94C86 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DBFDCE0F22B25C5D00C94C86 /* FileDownloaderTest */;
+			targetProxy = DBFDCE2522B25C6000C94C86 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DBFDCE1722B25C5D00C94C86 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DBFDCE1822B25C5D00C94C86 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		DBFDCE1C22B25C6000C94C86 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DBFDCE1D22B25C6000C94C86 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DBFDCE2B22B25C6000C94C86 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		DBFDCE2C22B25C6000C94C86 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DBFDCE2E22B25C6000C94C86 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = FileDownloaderTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.apple.FileDownloaderTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DBFDCE2F22B25C6000C94C86 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = FileDownloaderTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.apple.FileDownloaderTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		DBFDCE3122B25C6000C94C86 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HDAN5VT56A;
+				INFOPLIST_FILE = FileDownloaderTestTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.apple.FileDownloaderTestTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FileDownloaderTest.app/FileDownloaderTest";
+			};
+			name = Debug;
+		};
+		DBFDCE3222B25C6000C94C86 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HDAN5VT56A;
+				INFOPLIST_FILE = FileDownloaderTestTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.apple.FileDownloaderTestTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FileDownloaderTest.app/FileDownloaderTest";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DBFDCE0B22B25C5D00C94C86 /* Build configuration list for PBXProject "FileDownloaderTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DBFDCE2B22B25C6000C94C86 /* Debug */,
+				DBFDCE2C22B25C6000C94C86 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DBFDCE2D22B25C6000C94C86 /* Build configuration list for PBXNativeTarget "FileDownloaderTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DBFDCE2E22B25C6000C94C86 /* Debug */,
+				DBFDCE2F22B25C6000C94C86 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DBFDCE3022B25C6000C94C86 /* Build configuration list for PBXNativeTarget "FileDownloaderTestTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DBFDCE3122B25C6000C94C86 /* Debug */,
+				DBFDCE3222B25C6000C94C86 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DBFDCE0822B25C5D00C94C86 /* Project object */;
+}
