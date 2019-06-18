@@ -41,7 +41,7 @@ class FileDownloaderTestTests: XCTestCase {
                     XCTAssertNotNil(download.localFilePath, "Downloaded file path is nil")
                     XCTAssert(FileManager.default.isReadableFile(atPath: download.localFilePath!))
                     downloadedExpectation.fulfill()
-                } else {
+                } else if downloads?.isEmpty == true {
                     XCTAssert(false, "No downloads found")
                     downloadedExpectation.fulfill()
                 }
@@ -68,8 +68,8 @@ class FileDownloaderTestTests: XCTestCase {
                 let localFilePath = download.localFilePath ?? ""
                 downloader.removeDownload(for: download.identifier, { (error) in
                     XCTAssertNil(error)
-                    removeExpectation.fulfill()
                     XCTAssertFalse(FileManager.default.isReadableFile(atPath: localFilePath))
+                    removeExpectation.fulfill()
                 })
             } else {
                 XCTAssert(false, "No downloads found")
@@ -115,6 +115,7 @@ class FileDownloaderTestTests: XCTestCase {
             XCTAssertNil(error)
             XCTAssertNotNil(model)
             XCTAssert(model?.status == .DOWNLOADING)
+            resumeExpectation.fulfill()
         }
         self.wait(for: [resumeExpectation], timeout: 1)
 
@@ -123,9 +124,12 @@ class FileDownloaderTestTests: XCTestCase {
             XCTAssertNil(error)
             XCTAssertNotNil(model)
             XCTAssert(model?.status == .PAUSED)
+            pauseExpectation.fulfill()
         })
 
+        self.wait(for: [pauseExpectation], timeout: 1)
         // Check All Downloads
+        let checkExpectation = self.expectation(description: "checkExpectation")
         downloader.allDownloads({ (downloads) in
             XCTAssertNotNil(downloads)
             XCTAssert(downloads?.count == 1)
@@ -133,13 +137,13 @@ class FileDownloaderTestTests: XCTestCase {
                 data.identifier == self.identifier &&
                     data.status == .PAUSED
             }).first != nil {
-                pauseExpectation.fulfill()
+                checkExpectation.fulfill()
             } else {
                 XCTAssert(false, "No downloads found")
-                pauseExpectation.fulfill()
+                checkExpectation.fulfill()
             }
         })
-        self.wait(for: [pauseExpectation], timeout: 1)
+        self.wait(for: [checkExpectation], timeout: 1)
         // WE STILL HAVE 1 PAUSED ITEM
     }
 
@@ -149,9 +153,12 @@ class FileDownloaderTestTests: XCTestCase {
         downloader.pauseDownload(for: "THIS_IS_WORNG_IDENTIFIER", { (model, error) in
             XCTAssertNotNil(error)
             XCTAssertNil(model)
+            pauseExpectation.fulfill()
         })
+        self.wait(for: [pauseExpectation], timeout: 1)
 
         // Check All Downloads
+        let checkExpectation = self.expectation(description: "checkExpectation")
         downloader.allDownloads({ (downloads) in
             XCTAssertNotNil(downloads)
             XCTAssert(downloads?.count == 1)
@@ -159,13 +166,13 @@ class FileDownloaderTestTests: XCTestCase {
                 data.identifier == self.identifier &&
                     data.status == .PAUSED
             }).first != nil {
-                pauseExpectation.fulfill()
+                checkExpectation.fulfill()
             } else {
                 XCTAssert(false, "No downloads found")
-                pauseExpectation.fulfill()
+                checkExpectation.fulfill()
             }
         })
-        self.wait(for: [pauseExpectation], timeout: 1)
+        self.wait(for: [checkExpectation], timeout: 1)
         // WE STILL HAVE 1 PAUSED ITEM
     }
 
@@ -174,8 +181,11 @@ class FileDownloaderTestTests: XCTestCase {
         let removeExpecation = self.expectation(description: "removeExpecation")
         downloader.removeDownload(for: "THIS_IS_WORNG_IDENTIFIER", { (error) in
             XCTAssertNotNil(error)
+            removeExpecation.fulfill()
         })
+        self.wait(for: [removeExpecation], timeout: 1)
         // Check All Downloads
+        let checkExpectation = self.expectation(description: "checkExpectation")
         downloader.allDownloads({ (downloads) in
             XCTAssertNotNil(downloads)
             XCTAssert(downloads?.count == 1)
@@ -183,13 +193,13 @@ class FileDownloaderTestTests: XCTestCase {
                 data.identifier == self.identifier &&
                     data.status == .PAUSED
             }).first != nil {
-                removeExpecation.fulfill()
+                checkExpectation.fulfill()
             } else {
                 XCTAssert(false, "No downloads found")
-                removeExpecation.fulfill()
+                checkExpectation.fulfill()
             }
         })
-        self.wait(for: [removeExpecation], timeout: 1)
+        self.wait(for: [checkExpectation], timeout: 1)
         // WE STILL HAVE 1 PAUSED ITEM
     }
 
@@ -221,7 +231,7 @@ class FileDownloaderTestTests: XCTestCase {
                         data.remoteFilePath == self.remoteFilePath
                 }).count == 2 {
                     downloadedExpectation.fulfill()
-                } else {
+                } else if downloads?.isEmpty == true {
                     XCTAssert(false, "No downloads found")
                     downloadedExpectation.fulfill()
                 }
@@ -241,9 +251,7 @@ class FileDownloaderTestTests: XCTestCase {
         downloader.resumeDownload(for: otherIdentifier, remotePath: remoteFilePath) { (model, error) in
             XCTAssertNotNil(error)
             XCTAssertNil(model)
-            XCTAssert(model?.identifier == otherIdentifier)
-            XCTAssert(model?.remoteFilePath == self.remoteFilePath)
-            XCTAssert(model?.status == DownloadStatus.DOWNLOADING)
+            resumeExpectation.fulfill()
         }
 
         self.wait(for: [resumeExpectation], timeout: 2)
