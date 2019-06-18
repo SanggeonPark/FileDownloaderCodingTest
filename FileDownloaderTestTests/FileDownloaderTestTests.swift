@@ -207,15 +207,15 @@ class FileDownloaderTestTests: XCTestCase {
         let downloader = Downloader()
         let otherIdentifier = "38C002AC-A3C5-49DB-BC16-8BE61C439F36"
         downloader.resumeDownload(for: identifier, remotePath: remoteFilePath) { (model, error) in
-            XCTAssertNotNil(error)
-            XCTAssertNil(model)
+            XCTAssertNil(error)
+            XCTAssertNotNil(model)
             XCTAssert(model?.identifier == self.identifier)
             XCTAssert(model?.remoteFilePath == self.remoteFilePath)
             XCTAssert(model?.status == DownloadStatus.DOWNLOADING)
         }
         downloader.resumeDownload(for: otherIdentifier, remotePath: remoteFilePath) { (model, error) in
-            XCTAssertNotNil(error)
-            XCTAssertNil(model)
+            XCTAssertNil(error)
+            XCTAssertNotNil(model)
             XCTAssert(model?.identifier == otherIdentifier)
             XCTAssert(model?.remoteFilePath == self.remoteFilePath)
             XCTAssert(model?.status == DownloadStatus.DOWNLOADING)
